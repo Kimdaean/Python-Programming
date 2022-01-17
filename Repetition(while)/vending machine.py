@@ -1,3 +1,5 @@
+import os
+import time
 su = 0
 while True:
     print('-'*4,"Menu",'-'*4)
@@ -14,28 +16,37 @@ while True:
         money=int(input("돈을 넣어주세요: "))
         su+=money
     elif menu == 1:
-        if (money>=300):
+        if (su>=300):
             su -= 300
             print("\n콜라 맛있게 드세요")
+            time.sleep(1)
         else:
             print("\n금액이 부족합니다.")
+            time.sleep(1)
     elif menu == 2:
-        if (money>=300):
+        if (su>=300):
             su -= 300
             print("\n사이다 맛있게 드세요")
+            time.sleep(1)
         else:
             print("\n금액이 부족합니다.")
+            time.sleep(1)
     elif menu == 3:
-        if (money>=200):
+        if (su>=200):
             su -= 200
             print("\n커피 맛있게 드세요")
+            time.sleep(1)
         else:
             print("\n금액이 부족합니다.")
+            time.sleep(1)
     elif menu == 5:
         su = 0
         print("\n잔돈이 반환됩니다!")
         money = 0
+        time.sleep(1)
     elif menu == 6:
         break
     else:
         print("\n입력 오류")
+        time.sleep(1)
+    os.system("cls")
